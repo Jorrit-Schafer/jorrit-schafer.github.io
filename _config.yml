@@ -1,35 +1,30 @@
-# Site settings
-title: "Jorrit Schafer"
-author: "Jorrit Schafer"
-description: "Pharma | Advanced Analytics | Real-World Evidence | Machine Learning"
-email: jorrit.schafer@example.com
-url: "https://jorrit-schafer.github.io"
-baseurl: "" # leave blank for user/organization GitHub Pages site
+title: "Your Name"
+email: you@example.com
+description: "Pharma Data Science Director"
 
-# Social media usernames
-github_username: jorrit-schafer
-linkedin_username: jorritschafer
+remote_theme: LeNPaul/portfolio-jekyll-theme
 
-# Avatar image (place this file in assets/img/)
-avatar: "/assets/img/avatar.png"
+baseurl: ""
+url: "https://yourusername.github.io"
 
-# Navigation bar links
-navbar_links:
+navbar:
   - title: "Home"
     url: "/"
   - title: "Projects"
     url: "/projects/"
   - title: "About"
-    url: "/aboutme/"
-  - title: "Contact"
-    url: "/contact/"
+    url: "/about/"
 
-# Build settings
-markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
-# Optional: Google Analytics (uncomment if using)
-# google_analytics: UA-XXXXXXXXX-X
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
