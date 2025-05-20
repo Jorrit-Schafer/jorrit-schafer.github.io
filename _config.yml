@@ -1,30 +1,48 @@
+# Site basics
 title: "Jorrit Schafer"
-email: jorrit.schafer@gmail.com
-description: "Associate Director, Advanced Analytics"
+author: "Jorrit Schafer"
+email: jorrit.schafer@example.com
+description: "Pharma | Analytics | Data Science | Storytelling"
+url: "https://jorrit-schafer.github.io"
+baseurl: ""  # Keep this blank for user site
 
-remote_theme: LeNPaul/portfolio-jekyll-theme
+# Social links (used for icons and SEO)
+github_username: jorrit-schafer
+linkedin_username: jorritschafer
 
-baseurl: ""
-url: "https://yourusername.github.io"
+# Avatar image (ensure file exists at assets/img/avatar.png)
+avatar: "/assets/img/avatar.png"
 
-navbar:
+# Navigation bar
+navbar_links:
   - title: "Home"
     url: "/"
   - title: "Projects"
     url: "/projects/"
   - title: "About"
-    url: "/about/"
+    url: "/aboutme/"
+  - title: "Contact"
+    url: "/contact/"
 
+# Markdown engine and theme
+markdown: kramdown
+theme: minima  # or 'jekyll-theme-minimal' if using Pages theme
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
-collections:
-  projects:
-    output: true
+# Optional blog settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+permalink: /:year/:month/:day/:title/
 
+# Defaults (optional, for blog posts)
 defaults:
   - scope:
       path: ""
-      type: projects
+      type: posts
     values:
-      layout: project
+      layout: post
+      author: "Jorrit Schafer"
+      comments: true
+      share: true
